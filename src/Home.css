@@ -1,9 +1,14 @@
+body{
+  background: -webkit-linear-gradient(right, red, blue);
+  background: linear-gradient(to left, yellow, red);
+}
 .App {
   text-align: center;
 }
 
 .App-header {
-  background-color: #282c34;
+  background: -webkit-linear-gradient(right, red, blue);
+  background: linear-gradient(to left, yellow, red);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,7 +21,20 @@
 .App-link {
   color: #61dafb;
 }
-
+img{
+  border-radius: 25px;
+  padding: 20px;
+}
+button{
+  border-radius: 25px;
+  padding: 20px;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+button:hover{
+  background-color: yellow;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import letsgo from './LetsGo.png';
+
 class App extends Component {
     Click() {
         //GO TO NEXT PAGE + TRANSFER WEATHER DATA
@@ -91,4 +92,4 @@ class App extends Component {
     }
 }
 
-export default App
+export default App;
