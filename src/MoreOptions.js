@@ -1,5 +1,4 @@
 import React, {Component} from "react"
-import letsgo from './LetsGo.png';
 
 class App extends Component {
     Click() {
@@ -83,7 +82,7 @@ class App extends Component {
                         <option value="asia">Asia</option>
                     </select>
                     <br></br><br></br>
-                    <a href onClick={this.Click}><img src={letsgo} alt="sletsgo" /></a>
+                    <button className="btn">Let's go</button>
 
                 </form>
             </main>

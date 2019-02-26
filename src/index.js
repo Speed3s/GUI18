@@ -2,14 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import MoreOptions from "./MoreOptions";
-import Home from "./Home"
+import ImageProc from "./ImageProc";
+import Home from "./Home.js"
 
 ReactDOM.render((
   <BrowserRouter>
     <div>
         <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/" component={MoreOptions} />
+            <Route exact path="/" component={ImageProc} />
+            <Route exact path="/Home" component={Home} />
+            <Route path="/MoreOptions" component={MoreOptions} />
         </Switch>
     </div>
   </BrowserRouter>
