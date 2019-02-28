@@ -1,23 +1,59 @@
+body{
+  background-color: antiquewhite;
+}
+p{
+  background: -webkit-linear-gradient(blue, black);
+  background: linear-gradient(to right, blue, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px;
+}
+.btn{
+  width: 100;
+  text-align: center;
+  font-size: 16px;
+  padding: 15px 20px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  background: -webkit-linear-gradient(blue, black);
+  background: linear-gradient(to right, blue, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .App {
   text-align: center;
 }
+.titleheader{
+  font-size: 52px;
+  position: absolute;
+  top: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: blue;
+  text-align: center;
+  
+}
 
-.App-header {
-  background-image: url("background.png");
+.AppPage {
+  background-color: transparent;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  font-family:'Century Gothic','Futura',san-serif;
   color: white;
+  text-align: left;
 }
 
 .App-link {
   color: #61dafb;
 }
-
+img{
+  border-radius: 25px;
+  padding: 20px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -26,3 +62,4 @@
     transform: rotate(360deg);
   }
 }
+    
