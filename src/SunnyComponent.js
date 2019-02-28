@@ -1,13 +1,16 @@
 import React, {Component} from "react"
-import sunny from './Images/Sunny.png';
+import sunny from './Images/sun.png';
 
 
 class SunnyComponent extends React.Component{
 
     render(){
+        const SunSize = {
+            width: 80,
+        }
         return(
             <div className="sunnycomponent">
-              <h><img src={sunny} alt="sunny" /></h>
+              <h><img style= {SunSize}src={sunny} alt="sunny" /></h>
             </div>
         )
     }

@@ -1,6 +1,10 @@
 import React, {Component} from "react"
+import "./css/MoreOptions.css"
+import { Link } from 'react-router-dom';
+import './css/buttonstyle.css';
 
-class App extends Component {
+
+class MoreOptions extends Component {
     Click() {
         //GO TO NEXT PAGE + TRANSFER WEATHER DATA
       }
@@ -26,11 +30,11 @@ class App extends Component {
             [name]: value
         }) 
     }
-    
     render() {
         return (
             <main>
                 <form>
+                    
                     <br></br>
                     <p>Temperature {this.state.temp}</p>
                     <input 
@@ -82,8 +86,9 @@ class App extends Component {
                         <option value="asia">Asia</option>
                     </select>
                     <br></br><br></br>
-                    <button className="btn">Let's go</button>
-
+                    <div>
+                        <div className="btn from-right"><Link to="./FinalPage" onClick={()=>this.pushState('./FinalPage')}>Let's Go</Link></div>
+                    </div>
                 </form>
             </main>
         )
@@ -91,4 +96,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default MoreOptions;

@@ -1,20 +1,16 @@
 import React, {Component} from "react"
 import './css/Home.css';
-import snowy from './Images/Snowy.png';
+import snowy from './Images/snow.png';
 
 class SnowComponent extends React.Component{
     render(){
+        const SnowSize = {
+            width: 80,
+            
+        }
         return(
             <div className="snowycomponent">
-                <div class="snow-component">
-                    <div class="snow foreground"></div>
-                    <div class="snow foreground layered"></div>
-                    <div class="snow middleground"></div>
-                    <div class="snow middleground layered"></div>
-                    <div class="snow background"></div>
-                    <div class="snow background layered"></div>
-                </div>
-                <h><img src={snowy} alt="snowy" /></h>
+                <h><img style={SnowSize} src={snowy} alt="snowy" /></h>
             </div>
         )
     }
