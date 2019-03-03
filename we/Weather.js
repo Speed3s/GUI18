@@ -1,15 +1,16 @@
 import React from "react";
 
-
-class Weather extends React.Component{
-	render(){
-		return(
-			<div>
-				{this.props.description}
-				console.log(this.props.description)
-			</div>
-		)
-	}
+function Weather({ cities }) {
+    return (
+        <div >
+            {
+                cities.map(item => (
+                <div>
+                    <h4>{item}</h4>
+                </div>))
+            }
+        </div>
+    );
 }
 
 
