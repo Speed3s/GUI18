@@ -2,23 +2,40 @@ import React, {Component} from "react"
 import "./css/MoreOptions.css"
 import { Link } from 'react-router-dom';
 import './css/buttonstyle.css';
-
-
-class MoreOptions extends Component {
-    Click() {
-        //GO TO NEXT PAGE + TRANSFER WEATHER DATA
-      }
+class MoreOptions extends React.Component {
     constructor() {
         super()
         this.state = {
             temp: 18,
-            min: "",
-            max: "",
             region: "",
+            celcius: true,
+            unit: "C",
+            minTemp: -6,
+            maxTemp: 38,
         }
         this.handleChange = this.handleChange.bind(this)
+        this.changeUnit = this.changeUnit.bind(this)
     }
-    
+    changeUnit(){
+        const celcius = this.state.celcius;
+        if(celcius){
+            this.setState({
+                celcius: false,
+                unit: "F",
+                temp: (this.state.temp*9/5) +32,
+                minTemp: 21,
+                maxTemp: 100
+            });
+        }else{
+            this.setState({
+                celcius: true,
+                unit: "C",
+                temp: (this.state.temp-32)*5/9,
+                minTemp: -6,
+                maxTemp: 38
+            });
+        }
+    }
     handleChange(event) {
         const {name, value, type, checked} = event.target
         type === "checkbox" ? 
@@ -36,42 +53,18 @@ class MoreOptions extends Component {
                 <form>
                     
                     <br></br>
-                    <p>Temperature {this.state.temp}</p>
+                    <a onClick={this.changeUnit}> C|F</a>
+                    <p>Temperature {Math.round(this.state.temp)}°{this.state.unit}</p>
+                    
                     <input 
                     value={this.state.temp} 
                     name="temp" 
                     onChange={this.handleChange}
-                    type="range" min="-6" max="38"/>
-                    <br></br>
-                    <p>Chance of rain</p>
-                    
-                    <select 
-                        value={this.state.min} 
-                        name="min" 
-                        onChange={this.handleChange}
-                    >
-                        <option value="">No Min</option>
-                        <option value="0">0%</option>
-                        <option value="20">20%</option>
-                        <option value="40">40%</option>
-                        <option value="60">60%</option>
-                        <option value="80">80%</option>
-                    </select>
+                    type="range" 
+                    min = {this.state.minTemp}  
+                    max = {this.state.maxTemp}/>
 
-                    <select 
-                        value={this.state.max} 
-                        name="max" 
-                        onChange={this.handleChange}
-                    >
-                        <option value="">No Max</option>
-                        <option value="20">20%</option>
-                        <option value="40">40%</option>
-                        <option value="60">60%</option>
-                        <option value="80">80%</option>
-                        <option value="100">100%</option>
-                    </select>
-
-                    <br></br><br></br>
+                   <br></br>
                     <p>Region</p>
                     <select 
                         value={this.state.region} 
