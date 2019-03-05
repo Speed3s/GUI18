@@ -1,0 +1,76 @@
+.rain-component {
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    max-width: 100%;
+    top: 500px;
+    overflow: hidden;
+    z-index: 2;
+    pointer-events: none;
+    background-color: transparent;
+    
+  }
+  
+  .rain {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+    -webkit-animation: snow linear infinite;
+            animation: snow linear infinite;
+  }
+  .rain.foreground {
+    background-image: url("http://pngimg.com/uploads/rain/rain_PNG13469.png");
+    -webkit-animation-duration: 15s;
+            animation-duration: 15s;
+  }
+  .rain.foreground.layered {
+    -webkit-animation-delay: 7.5s;
+            animation-delay: 7.5s;
+  }
+  .rain.middleground {
+    background-image: image-url("/Images/rain2.png");
+    -webkit-animation-duration: 20s;
+            animation-duration: 20s;
+  }
+  .rain.middleground.layered {
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;
+  }
+  .rain.background {
+    background-image: image-url("/Images/rain2.png");
+    -webkit-animation-duration: 10s;
+            animation-duration: 10s;
+  }
+  .rain.background.layered {
+    -webkit-animation-delay: 15s;
+            animation-delay: 15s;
+  }
+  
+  @-webkit-keyframes snow {
+    0% {
+      -webkit-transform: translate3d(0, -100%, 0);
+              transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      -webkit-transform: translate3d(15%, 100%, 0);
+              transform: translate3d(15%, 100%, 0);
+    }
+  }
+  
+  @keyframes snow {
+    0% {
+      -webkit-transform: translate3d(0, -100%, 0);
+              transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      -webkit-transform: translate3d(15%, 100%, 0);
+              transform: translate3d(15%, 100%, 0);
+    }
+  }

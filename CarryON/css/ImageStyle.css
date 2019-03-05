@@ -1,0 +1,101 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.btn{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+
+}
+
+.Logo{
+    border-radius: 50%;
+    position: absolute;
+    height: 95px;
+    top: 0;
+    max-width: 90px;
+    height: auto;
+}
+/*
+Header Wrapper
+*/
+#header{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.HeaderOuter{
+    display: table;
+    width: 100%;
+    margin-left: 40px;
+    table-layout: fixed;
+}
+.HeaderWrapper1 {
+    display: table-cell;
+    vertical-align: top;
+    width: 100%;
+    position: absolute;
+    left: 100px;
+    top: 0px;
+}
+.HeaderWrapper {
+    display: table-cell;
+    vertical-align: top;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 450px;
+}
+/*
+Image Wrapper
+*/
+#ImageWrap {
+    max-width: 500px;
+    margin: 160px auto 160px auto;
+}
+
+#ImageOuter{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+/* #ImageWrapper {
+    display: block;
+    vertical-align: top;
+    width: 100%;
+} */
+
+.weatherComp:hover{
+    transition: 1s;
+    -webkit-box-shadow: 0px 0px 21px 0px rgba(30,0,255,1);
+    -moz-box-shadow: 0px 0px 21px 0px rgba(30,0,255,1);
+    box-shadow: 0px 0px 21px 0px rgba(30,0,255,1);
+}
+img{
+    width: 100%;
+    height: auto;
+}
+
+/*
+Text Wrapper
+*/
+.textWrap {
+    max-width: 500px;
+    margin: 60px auto 60px auto;
+}
+
+.textOuter{
+    display: table;
+    width: 100%;
+    padding: 20px;
+    table-layout: fixed;
+}
+.textWrapper {
+    display: block;
+    vertical-align: top;
+    width: 100%;
+}
