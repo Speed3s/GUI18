@@ -7,6 +7,7 @@ class MoreOptions extends React.Component {
         super()
         this.state = {
             temp: 18,
+            country: "",
             region: "",
             celcius: true,
             unit: "C",
@@ -46,6 +47,9 @@ class MoreOptions extends React.Component {
         this.setState({
             [name]: value
         }) 
+    }
+    HandleSubmit(e){
+        e.preventDefault();
     }
     render() {
         return (
@@ -133,7 +137,8 @@ class MoreOptions extends React.Component {
 					
                     <br></br><br></br>
                     <div>
-                        <div className="btn from-right"><Link to="./FinalPage" onClick={()=>this.pushState('./FinalPage')}>Let's Go</Link></div>
+                        <div className="btn from-right"><Link to={{pathname: '/FinalPage', temperature: this.state.temp, country: this.state.region}}>Let's Go</Link></div>
+                        
                     </div>
                 </form>
             </main>

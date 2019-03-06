@@ -1,14 +1,30 @@
 import React, {Component} from "react";
-import ImageComponent from './ImageComponents';
+
 
 
 class FinalPage extends Component{
-    
-    
-    handleSubmit(){}
-    
+    constructor(props)
+    {
+        super(props);
+        this.state = {
+            
+        }
+    }
     render(){
+        //const {text} = props.location.state;
+
         return(
+            
+            <div>     
+                <h1>
+                 {
+                    this.props.location.temperature
+                    &&
+                    this.props.location.country
+                 }   
+                </h1>                               
+                
+            </div>
         )
     }
 }
