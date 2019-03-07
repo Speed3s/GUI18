@@ -1,0 +1,25 @@
+body{
+  
+    background-image: url("../Images/Background.png");
+    margin-top: 400;
+}
+
+h2{
+    font-family: "Century Gothic", AppleGothic, Arial, sans-serif;
+    color: darkblue;
+    margin-left: 10px;
+}
+h1{
+    font-family: "Century Gothic", AppleGothic, Arial, sans-serif;
+    color: black;
+    text-align: center;
+}
+
+h3{
+    font-family: "Century Gothic", AppleGothic, Arial, sans-serif;
+    margin-left: 10px;
+}
+
+.white{
+    background-color: white;
+}

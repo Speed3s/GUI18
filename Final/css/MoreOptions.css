@@ -1,0 +1,31 @@
+/* body{
+  text-align: center;
+  text-align: top;
+  background-image: url(../Images/Background.png);
+  color:white;
+	font-family: "Century Gothic", AppleGothic, Arial, sans-serif;
+	font-size: 20px;
+} */
+body{
+  background-color: lightblue;
+  /*color: #ff1010;*/
+	font-family: "Century Gothic", AppleGothic, Arial, sans-serif;
+  font-size: 16px;
+  text-align:center;
+  background-image: url("../Images/Background.png")
+}
+p{
+  /*color: #ff1010;*/
+  font-family: "Century Gothic", AppleGothic, Arial, sans-serif;
+  color:white;
+  font-size: 20px;
+  text-align: center;
+
+}
+.conversion{
+  font-family: "Century Gothic", AppleGothic, Arial, sans-serif;
+  font-size: 20px;
+  color: white;
+  text-align: right;
+  text-align: center;
+}
